@@ -5,7 +5,7 @@
 
 # ##### 1. Pengumpulan Data
 
-# In[1]:
+# In[2]:
 
 
 import pandas as pd
@@ -21,7 +21,7 @@ print(data.head())
 
 # ##### 2. Preprocessing Data
 
-# In[2]:
+# In[3]:
 
 
 # Memeriksa nilai yang hilang
@@ -44,7 +44,7 @@ print(data.info())
 
 # ##### 3. Pemilihan Algoritma Klasifikasi
 
-# In[3]:
+# In[4]:
 
 
 from sklearn.model_selection import train_test_split
@@ -59,3 +59,47 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_
 
 
 # - Memisahkan dataset menjadi fitur (X) dan target (y). Kemudian, data dibagi menjadi data pelatihan dan pengujian dengan proporsi 80% untuk pelatihan dan 20% untuk pengujian.
+
+# ##### 4. Pelatihan Model
+
+# In[5]:
+
+
+# Membuat model KNN
+knn = KNeighborsClassifier(n_neighbors=5)
+
+# Melatih model
+knn.fit(X_train, y_train)
+
+
+# - Membuat model KNN dengan 5 tetangga terdekat dan melatih model menggunakan data pelatihan.
+
+# ##### 5. Evaluasi Model
+
+# In[6]:
+
+
+from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, confusion_matrix
+
+# Melakukan prediksi
+y_pred = knn.predict(X_test)
+
+# Menghitung metrik evaluasi
+accuracy = accuracy_score(y_test, y_pred)
+precision = precision_score(y_test, y_pred)
+recall = recall_score(y_test, y_pred)
+f1 = f1_score(y_test, y_pred)
+
+# Menampilkan hasil evaluasi
+print(f'Akurasi: {accuracy:.2f}')
+print(f'Presisi: {precision:.2f}')
+print(f'Recall: {recall:.2f}')
+print(f'F1-Score: {f1:.2f}')
+
+# Menampilkan matriks kebingungan
+conf_matrix = confusion_matrix(y_test, y_pred)
+print('Matriks Kebingungan:')
+print(conf_matrix)
+
+
+# - Melakukan prediksi pada data pengujian dan menghitung metrik evaluasi seperti akurasi, presisi, recall, dan F1-score. Hasil evaluasi ditampilkan, bersama dengan matriks kebingungan yang menunjukkan jumlah prediksi benar dan salah.
