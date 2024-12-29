@@ -103,3 +103,22 @@ print(conf_matrix)
 
 
 # - Melakukan prediksi pada data pengujian dan menghitung metrik evaluasi seperti akurasi, presisi, recall, dan F1-score. Hasil evaluasi ditampilkan, bersama dengan matriks kebingungan yang menunjukkan jumlah prediksi benar dan salah.
+
+# ##### 6. Interpretasi dan Analisis Hasil
+
+# In[7]:
+
+
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+# Visualisasi matriks kebingungan
+plt.figure(figsize=(8, 6))
+sns.heatmap(conf_matrix, annot=True, fmt='d', cmap='Blues', xticklabels=['No Disease', 'Disease'], yticklabels=['No Disease', 'Disease'])
+plt.ylabel('Actual')
+plt.xlabel('Predicted')
+plt.title('Matriks Kebingungan')
+plt.show()
+
+
+# - Menggunakan seaborn untuk membuat heatmap dari matriks kebingungan, yang membantu dalam visualisasi hasil prediksi model.
