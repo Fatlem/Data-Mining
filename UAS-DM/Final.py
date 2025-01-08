@@ -1,6 +1,11 @@
 #!/usr/bin/env python
 # coding: utf-8
 
+# ### UAS PENAMBANGAN DATA
+# ###### NAMA : FAATHIR EL TASLEEM
+# ###### NIM : A11.2022.14624
+# ###### KELOMPOK : A11.4504
+
 # #### "Prediksi Risiko Penyakit Jantung Menggunakan Algoritma Klasifikasi"
 
 # ##### 1. Pengumpulan Data
