@@ -1,4 +1,4 @@
-# 📊 Prediksi Risiko Penyakit Jantung Menggunakan Algoritma Klasifikasi
+# 📊 Heart Disease Classification Dataset Menggunakan Algoritma Klasifikasi
 
 ## 📋 Deskripsi Proyek
 Proyek ini bertujuan untuk memprediksi risiko penyakit jantung menggunakan algoritma klasifikasi. Dataset yang digunakan berisi informasi tentang pasien, termasuk usia, jenis kelamin, tekanan darah, kolesterol, dan variabel lainnya.
