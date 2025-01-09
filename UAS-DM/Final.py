@@ -1,12 +1,47 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# ### UAS PENAMBANGAN DATA
-# ###### NAMA : FAATHIR EL TASLEEM
-# ###### NIM : A11.2022.14624
-# ###### KELOMPOK : A11.4504
+# ## "Prediksi Risiko Penyakit Jantung Menggunakan Algoritma Klasifikasi"
 
-# #### "Prediksi Risiko Penyakit Jantung Menggunakan Algoritma Klasifikasi"
+# >- ###### NAMA : FAATHIR EL TASLEEM
+# >- ###### NIM : A11.2022.14624
+# >- ###### KELOMPOK : A11.4504
+
+# ### Ringkasan dan Permasalahan Project
+# - Ringkasan: Proyek ini bertujuan untuk mengembangkan model klasifikasi yang dapat memprediksi risiko penyakit jantung berdasarkan data medis pasien.
+# - Permasalahan: Penyakit jantung merupakan salah satu penyebab utama kematian di seluruh dunia. Oleh karena itu, penting untuk memiliki alat yang dapat membantu dalam mendeteksi risiko penyakit jantung lebih awal.
+# - Tujuan yang Akan Dicapai:
+# Membangun model yang akurat untuk memprediksi risiko penyakit jantung.
+# Mengidentifikasi faktor-faktor yang berkontribusi terhadap risiko penyakit jantung.
+# - Model / Alur Penyelesaian:
+#   - Pengumpulan Data: Mengumpulkan dataset yang relevan.
+#   - Preprocessing Data: Membersihkan dan menyiapkan data untuk analisis.
+#   - Pemilihan Algoritma: Memilih algoritma klasifikasi yang sesuai (misalnya, KNN).
+#   - Pelatihan Model: Melatih model menggunakan data pelatihan.
+#   - Evaluasi Model: Mengukur performa model menggunakan metrik evaluasi.
+
+# ### Penjelasan Dataset, EDA, dan Proses Features Dataset
+# - Dataset: Dataset berisi informasi medis pasien yang mencakup berbagai fitur seperti usia, jenis kelamin, tekanan darah, kolesterol, dan hasil diagnosis (target).
+# - Exploratory Data Analysis (EDA):
+#     - Memeriksa nilai yang hilang dan melakukan pembersihan data.
+#     - Normalisasi fitur seperti kolesterol dan tekanan darah untuk memastikan skala yang konsisten.
+# - Proses Features Dataset:
+#     - Memisahkan fitur (X) dan target (y).
+#     - Menggunakan teknik seperti MinMaxScaler untuk menormalkan data.
+
+# ### Proses Learning / Modeling
+# - Model yang Digunakan: KNeighborsClassifier (KNN) dengan 5 tetangga terdekat.
+# - Langkah-langkah:
+#     - Memisahkan dataset menjadi data pelatihan dan pengujian (80% pelatihan, 20% pengujian).
+#     - Melatih model KNN menggunakan data pelatihan.
+
+# ### Performa Model
+# - Metrik Evaluasi:
+#     - Akurasi: Mengukur seberapa banyak prediksi yang benar dibandingkan dengan total prediksi.
+#     - Presisi: Mengukur proporsi prediksi positif yang benar.
+#     - Recall: Mengukur proporsi kasus positif yang terdeteksi.
+# F1-Score: Harmonik rata-rata dari presisi dan recall.
+#     - Matriks Kebingungan: Menampilkan jumlah prediksi benar dan salah untuk analisis lebih lanjut.
 
 # ##### 1. Pengumpulan Data
 
@@ -145,3 +180,15 @@ plt.show()
 
 
 # - Membuat visualisasi distribusi usia terhadap risiko penyakit jantung, menunjukkan jumlah pasien berdasarkan usia dan status penyakit jantung.
+
+# ### Diskusi Hasil dan Kesimpulan
+# - Visualisasi Hasil: Menggunakan heatmap untuk matriks kebingungan dan grafik distribusi usia terhadap risiko penyakit jantung.-  
+# - Kesimpulan:
+# >- Model KNN dapat digunakan untuk memprediksi risiko penyakit jantung dengan akurasi yang memadai.
+# >- Faktor-faktor seperti usia dan kolesterol memiliki pengaruh signifikan terhadap risiko penyakit jantung.
+
+# In[ ]:
+
+
+
+
